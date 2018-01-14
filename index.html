@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Octopus</title>
+<style type="text/css">
+@import url('https://fonts.googleapis.com/css?family=Fascinate');
+@import url('https://fonts.googleapis.com/css?family=Courgette');
+
+.company {
+	font-family: 'Fascinate', cursive;
+}
+.headline {
+	font-family: 'Courgette', cursive;
+}
+.octopus{
+	top:-20px;
+	left:0;
+	width:200px;
+	height: 200px;
+	text-align: center;
+	float:left;
+}
+h1 {
+	margin: 0 auto;
+	margin-right: 200px;
+	text-align: center;
+	line-height: 150px;
+	font-size: 48px;
+}
+h2 {
+	margin: 0 auto;
+	text-align: center;
+}
+h3 {
+	margin: 0 auto;
+	margin-right: 200px;
+	text-align: center;
+	padding-bottom: 20px;
+}
+body {
+	background-color: ivory;
+	margin: 0;
+	padding: 0;
+}
+header {
+	height: 50px;
+	position: relative;
+	background-color: ivory;
+	color: #000000;
+}
+nav {
+	width: 80%;
+	margin: 0 auto;
+}
+main {
+	width: 80%;
+	height: auto;
+	background-color: #45a049;
+	margin: 0 auto;
+	margin-bottom: 0;
+}
+section {
+	margin-top: 0;
+	width: 80%;
+	margin: 0 auto;
+	background-color: #889c9e;
+}
+.blackspace {
+	margin: 0 auto;
+	color: white;
+}
+.image {
+	position: relative;
+	width: 100%;
+	height:400px;
+	margin: 0 auto;
+	background-color: #889c9e;
+	background-image: url(generation2.jpg);
+	background-size: 80%;
+	background-repeat: no-repeat;
+}
+.nav ul {
+	list-style: none;
+	background-color: #444;
+	opacity: 0.8;
+	text-align: center;
+	padding: 0;
+	margin: 0;
+}
+.nav li {
+	font-family: 'Oswald', sans-serif;
+	font-size: 1.2em;
+	line-height: 40px;
+	height: 40px;
+	border-bottom: 1px solid #888;
+} 
+.nav a {
+	text-decoration: none;
+	color: #fff;
+	display: block;
+	transition: .3s background-color;
+}
+.nav a:hover {
+	background-color: #005f5f;
+}
+.nav a.active {
+	background-color: #fff;
+	color: #444;
+	cursor: default;
+}
+#TextBox {
+	position: absolute;
+	top: 135px;
+	right: 155px;
+}
+#buttonBox {
+	position: absolute;
+	right: 200px;
+	bottom: 75px;
+}
+.button {
+	font-size: large;
+	border: 1px solid #333 ;
+	border-radius: 8px;
+	background-color: #fc4a1a;
+	display: inline-block;
+	padding: 0 30px;
+	text-align: center;
+	height: auto;
+	width: 70%;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	text-decoration: none;
+	cursor: pointer;
+	line-height: 40px;
+}
+a.button {
+	color: #333 ;
+}
+/* Hover effekt över knappar och länkar */
+.button:hover {
+	opacity: 1;
+	transition: .3s ease;
+	backface-visibility: hidden;
+	background-color: #fc4a1a;
+	color: black;
+}
+.button:hover {
+	opacity: 0.9;
+}
+/* karusell */
+.item-1, 
+.item-2, 
+.item-3 {
+	position: absolute;
+	display: block;
+	top: 2em;
+	font-size: 24px;
+	width: 60%;
+	color: #333 ;
+	font-weight: bolder;
+	animation-duration: 50s;
+	animation-timing-function: ease-in-out;
+	animation-iteration-count: infinite;
+}
+.item-1 {
+	animation-name: anim-1;
+}
+.item-2 {
+	animation-name: anim-2;
+}
+.item-3 {
+	animation-name: anim-3;
+}
+@keyframes anim-1 {
+	0%, 8.3% { left: 47%; opacity: 0; }
+  8.3%,25% { left: 47%; opacity: 1; }
+  33.33%, 100% { left: 47%; opacity: 0; }
+}
+@keyframes anim-2 {
+	0%, 33.33% { left: 43%; opacity: 0; }
+  41.63%, 58.29% { left: 43%; opacity: 1; }
+  66.66%, 100% { left: 43%; opacity: 0; }
+}
+@keyframes anim-3 {
+	0%, 66.66% { left: 45%; opacity: 0; }
+  74.96%, 91.62% { left: 45%; opacity: 1; }
+  100% { left: 45%; opacity: 0; }
+}
+/* Produkter */
+.produktwrap{
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+.package {
+	font-size: 24px;
+	text-align: center;
+}
+.prod1 {
+	margin-left: 2px;
+	width: 33%;
+	background-color: #4abdac;
+}
+.prod2 {
+	width: 33%;
+	background-color: #008f95;
+}
+.prod3 {
+	margin-right: 2px;
+	width: 33%;
+	background-color: #f7b733;
+}
+/* prova på erbjudande */
+.prova {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	margin-top: 100px;
+}
+.prov1 {
+	max-width: 50%;
+	background-color: #45a049;
+	padding: 50px;
+}
+.prov2 {
+	padding-top: 50px;
+	min-width: 50%;
+	background-color: #45a049;
+}
+/* formulär */
+input[type=text] {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-sizing: border-box;
+    resize: both;
+}
+
+label {
+    padding: 12px 12px 12px 0;
+    display: inline-block;
+}
+
+input[type=submit] {
+    background-color: #141823;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+input[type=submit]:hover {
+    background-color: #4CAF50;
+}
+.container {
+	border-radius: 5px;
+	padding: 20px;
+}
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+@media screen and (min-width: 600px) {
+.nav li {
+	width: 120px;
+	border-bottom: none;
+	height: 50px;
+	line-height: 50px;
+	font-size: 1.4em;
+}
+.nav li {
+	display: inline-block;
+	margin-right: -4px;
+}
+}
+@media (max-width: 600px) {
+input[type=submit] {
+    width: 100%;
+    margin-top: 0;
+}
+.prov2 {
+padding-top: 100px;
+}
+}
+</style>
+</head>
+<body>
+<header>
+
+</header>
+<nav>
+	<div class="nav">
+      <ul>
+        <li class=""><a  class="active" href="#">Hem</a></li>
+        <li class=""><a href="#">Produkter</a></li>
+  
+        <li class=""><a href="#">Logga in</a></li>
+        <li class=""><a href="#">Sök.....</a></li>
+      </ul>
+    </div>
+</nav>
+<main>
+	<div class="blackspace">
+		<img class="octopus" src="octopus.png" alt="Octopus AB" \>
+		<h1><span class="company">Cloud Family</span></h1><h3>-Din nyckel till historisk kunskap-</h3></div>
+
+</main>
+<section>
+	<div class="image">
+	
+	<div id="textBox">
+	
+  <div>
+    <p class="item-1">
+      Cloud Family är din enkla väg till att hålla koll på släktingar <br /><br />
+      Cloud Family ger dig möjlighet att skapa ditt eget släktträd
+      <br /><br />
+      Ge hela släkten möjlighet att vara med och vårda släktträdet
+    </p>
+    <p class="item-2">
+      
+      256-bitars kryptering gör att dina släktingar är säkra hos Cloud Family <br/><br/>
+      Din familjs hemligheter är säkra i vårt moln 
+    </p>
+    <p class="item-3">
+      Håll reda på födelsedagarna med Cloud Family <br /><br />
+      Rangordna släktingarnas förnamn när det nya barnet ska namnges    <br /><br />
+      Cloud Family binder samman din släkt såväl i molnet som på jorden 
+    </p>
+    <p>
+      
+    </p>
+  </div>
+
+  </div>
+  	<div id="buttonBox"><a class="button" href="#länk till shoppen" title="gratis">Prova Gratis</a></div>
+</div>
+</div>
+ 
+<div class="produktwrap">
+	<div class="prod1">
+		<div class="package"><p><span class="company">Cloud Family</span> - Testversion</p></div>
+		<ul>
+			<li></li>
+			<li>Två användare på ett konto</li>
+			<li>Ner till 1900-talet</li>
+			<li>256-bitars kryptering</li>
+			<li></li>
+		</ul>
+	</div>
+		<div class="prod2">
+		<div class="package"><p><span class="company">Cloud Family</span> - Basic</p></div>
+		<ul>
+			<li></li>
+			<li>20 användare på ett konto</li>
+			<li>Ner till 1800-talet</li>
+			<li>256-bitars kryptering</li>
+			<li></li>
+		</ul>
+	</div>
+		<div class="prod3">
+		<div class="package"><p><span class="company">Cloud Family</span> - Premium</p></div>
+		<ul>
+			<li></li>
+			<li>hela släkten får ta del av kontot</li>
+			<li>ingen årsbegränsning</li>
+			<li>256-bitars kryptering</li>
+			<li>Offlineläge</li>
+			<li>Telefonsupport 24/7</li>
+		</ul>
+	</div>
+</div>
+<div class="prova">
+	<div class="prov1"><h2><span class="headline">Så här fungerar det</span></h2><p>Det här med släktforskning kan ibland uppleva som komplicerat och tidskrävande. Med hjälp av vår tjänst Cloud Family så sker allt automatiskt. <br><br> Att komma igång tar inte mer än 3 minuter. Därefter får du notiser så fort en matchning skett. Vi är verksamma i över 100 länder vilket ger möjlighet till snabb personlig support.<br><br>
+	Fyll i formuläret och du kommer få ett mail med instruktioner.  </p></div>
+	<div class="prov2">
+		<div class="container">
+  <form action="/action_page.php">
+
+        <label for="name">Fullständigt namn</label><br>
+
+        <input type="text" id="name" name="namn" placeholder="Ditt fullständiga namn.."><br>
+
+        <label for="email">Epost:</label><br>
+
+        <input type="text" id="email" name="email" placeholder="Din epostadress.."><br>
+
+    
+      <input type="submit" value="Submit">
+    
+  </form>
+</div>
+	</div>
+</div>
+</section>
+<footer>
+	
+
+
+</footer>
+
+</body>
+</html>
